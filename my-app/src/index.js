@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class HelloWorld extends React.Component {
+class Letter extends React.Component {
     render() {
       return (
-        <div className="hello-world">
-          <h1>Hello, {this.props.name}</h1>
+        <div className="letter">
+          {this.props.children}
         </div>
       );
     }
@@ -15,9 +15,12 @@ class HelloWorld extends React.Component {
 
 
 ReactDOM.render(
-    <div>
-        <HelloWorld name="Sara" />
-        <HelloWorld name="Mark" />
+    <div id='container'>
+        <Letter>T</Letter>
+        <Letter>-</Letter>
+        <Letter>R</Letter>
+        <Letter>E</Letter>
+        <Letter>X</Letter>
     </div>
     ,
     document.getElementById('root')
